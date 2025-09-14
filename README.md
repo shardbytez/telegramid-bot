@@ -2,8 +2,6 @@
 # GetYourID Bot
 
 A simple Telegram bot that helps you quickly get your Telegram ID and account info. Works in private chats and groups.
-Простой Telegram-бот, который помогает быстро узнать ваш Telegram ID и информацию об аккаунте. Работает в личных чатах и группах.
-
 
 
  English
@@ -38,6 +36,8 @@ Author: @Coinbix17 https://t.me/Coinbix17
 
 
 Русский
+
+Простой Telegram-бот, который помогает быстро узнать ваш Telegram ID и информацию об аккаунте. Работает в личных чатах и группах.
 
 Файлы в репозитории: bot.py, start.sh, token.txt, venv/
 
