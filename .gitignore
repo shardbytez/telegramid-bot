@@ -1,0 +1,14 @@
+# secret token
+token.txt
+
+# virtualenv
+venv/
+__pycache__/
+*.pyc
+
+# logs
+bot.log
+*.log
+
+# OS files
+.DS_Store
