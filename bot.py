@@ -19,41 +19,28 @@ if not TOKEN:
 # 🔹 /start — показывает только ID
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user: User = update.effective_user
-    text = (
-        "╭───────────────╮\n"
-        "│  Your ID      │\n"
-        "├───────────────┤\n"
-        f"🆔 {user.id}\n"
-        "╰───────────────╯"
-    )
-    await update.message.reply_text(text)
+    text = ( f"🎯Your Telegram ID -> <code>{user.id}</code>\n" )
+    await update.message.reply_text(text, parse_mode="HTML")
 
 # 🔹 /id — тоже только ID
 async def get_id(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user: User = update.effective_user
-    text = (
-        "╭───────────────╮\n"
-        "│  Your ID      │\n"
-        "├───────────────┤\n"
-        f"🆔 {user.id}\n"
-        "╰───────────────╯"
-    )
-    await update.message.reply_text(text)
+    text = ( f"🎯Your ID -> <code>{user.id}</code>\n" )
+    await update.message.reply_text(text, parse_mode="HTML")
 
 # 🔹 /me — полная инфо-карточка
 async def me(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user: User = update.effective_user
     text = (
-        "╭───────────────╮\n"
-        "│  Your info    │\n"
-        "├───────────────┤\n"
-        f"🆔 ID: {user.id}\n"
-        f"💬 Username: @{user.username if user.username else '—'}\n"
-        f"⭐ Premium: {'✅' if getattr(user, 'is_premium', False) else '❌'}\n"
-        f"🤖 Bot: {'✅' if user.is_bot else '❌'}\n"
-        "╰───────────────╯"
+        f"<b>Your info</b>\n"
+        f"---------------\n"
+        f"<b>ID</b> -> <code>{user.id}</code>\n"
+        f"<b>Username</b> -> <code>@{user.username if user.username else '—'}</code>\n"
+        f"<b>Premium</b> -> {'✅' if getattr(user, 'is_premium', False) else '❌'}\n"
+        f"<b>Language</b> -> {user.language_code}\n"
+        f"<b>Bot</b> -> {'✅' if user.is_bot else '❌'}"
     )
-    await update.message.reply_text(text)
+    await update.message.reply_text(text, parse_mode="HTML")
 
 # 🔹 /help
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
